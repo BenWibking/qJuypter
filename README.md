@@ -38,10 +38,6 @@ To terminate this notebook session press ctrl-C twice.
 ## SSH Tunnels
 If you cannot access the compute resource directly from your desktop you will need to setup an SSH tunnel.
 
-At this time the procedure is known to work on Mac OS X and Linux desktops where SSH can be run on the command line.
-For Windows desktops there may be [several](https://code.google.com/p/putty-tunnel-manager/) [ways](http://www.ytechie.com/2008/05/set-up-a-windows-ssh-tunnel-in-10-minutes-or-less/) [to](http://superuser.com/questions/235395/automatic-ssh-tunneling-from-windows) [create](http://www.vpnreactor.com/windows_ssh_tunnel.html) [SSH tunnels](http://nemesis2.qx.net/pages/MyEnTunnel)
-
-
 On your desktop computer running either Linux or Mac OS X open a second terminal and run the SSH tunnel command shown in your `qjupyter.sh` output.
 
 * NOTE: do not stop the SSH tunnel process or you will lose your connection to the Jupyter notebook
