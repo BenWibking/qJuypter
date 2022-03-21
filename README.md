@@ -20,20 +20,18 @@ qsub: job 36968229.gadi-pbs ready
 Once the interactive job is running run `qjupyter.sh` to launch the notebook and receive further instructions.
 
 ```
-defusco@n4:~>./qjupyter.sh
+[bw0729@gadi-cpu-clx-2731 ~]$ sh qJuypter/qjupyter.sh
 
 
-Launching Jupyter Notebook with port 4922 on n4
+Launching Jupyter Notebook with port 8080 on gadi-cpu-clx-2731.gadi.nci.org.au
 
-If you cannot access http://n4:4922 then you will need an SSH tunnel
 Your SSH tunnel command on your desktop should look like the following
-  ssh -L 9999:localhost:8888 defusco@$GATEWAY ssh -L 8888:localhost:4922 -N n4
 
-    This job was submitted from login0a-priv and it may be able to serve as the $GATEWAY node
+  ssh -L 9999:gadi-cpu-clx-2731.gadi.nci.org.au:8080 bw0729@gadi-login-08.gadi.nci.org.au
 
-  Then visit http://localhost:9999 on your desktop.
+Then visit http://localhost:9999 on your desktop.
 
-  To terminate this notebook session press ctrl-C twice.
+To terminate this notebook session press ctrl-C twice.
 ```
 
 
@@ -49,7 +47,7 @@ On your desktop computer running either Linux or Mac OS X open a second terminal
 * NOTE: do not stop the SSH tunnel process or you will lose your connection to the Jupyter notebook
 
 ```
-ssh -L 9999:gadi-cpu-clx-2731.gadi.nci.org.au:16117 bw0729@gadi
+ssh -L 9999:gadi-cpu-clx-2731.gadi.nci.org.au:8080 bw0729@gadi.nci.org.au
 ```
 
 Once the tunnel has been established you can connect directly to your Jupyter notebook running on the compute node by navigating your browser to `http://localhost:9999`.
