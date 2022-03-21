@@ -13,13 +13,14 @@ then
   exit 1
 else
   port=8080
+  gateway=${PBS_O_HOST#[[:alpha:]]*.}
   echo
   echo
   echo "Launching Jupyter Notebook with port $port on $HOSTNAME"
   echo
   echo "Your SSH tunnel command on your desktop should look like the following"
   echo 
-  echo "  ssh -L 9999:$HOSTNAME:$port $USER@$PBS_O_HOST"   
+  echo "  ssh -L 9999:$HOSTNAME:$port $USER@$gateway"   
   echo
   echo "Then visit http://localhost:9999 on your desktop."
   echo
