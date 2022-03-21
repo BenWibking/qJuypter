@@ -1,7 +1,7 @@
 # qJupyter
 
-This script can be used to launch Jupyter notebooks directly from an interactive job using Torque PBS.
-It will select a random port number and suggest an SSH tunnel command if necessary.
+This script can be used to launch Jupyter notebooks directly from an interactive job using PBS.
+It will suggest an SSH tunnel command if necessary.
 
 ## Submit interactive job
 You can submit an interactive job for iPython just like a normal job.
@@ -9,11 +9,11 @@ You can submit an interactive job for iPython just like a normal job.
 * NOTE: even though it is possible to request more than one core in a job there is no guarantee that Python will be able to run your tasks in parallel.
 
 ```
-defusco@login0a:~>qsub -I -q shared -l nodes=1:ppn=1,walltime=2:00:00
-qsub: waiting for job 3060579.clusman0a.frank.sam.pitt.edu to start
-qsub: job 3060579.clusman0a.frank.sam.pitt.edu ready
+[bw0729@gadi-login-08 ~]$ qsub -I -lwalltime=1:00:00,mem=190GB,ncpus=48,jobfs=400GB,storage=scratch/jh2+gdata/jh2
+qsub: waiting for job 36968229.gadi-pbs to start
+qsub: job 36968229.gadi-pbs ready
 
-defusco@n4:~>
+[bw0729@gadi-cpu-clx-2731 ~]$
 ```
 
 ## Launch iPython notebook
