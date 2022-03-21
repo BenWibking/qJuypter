@@ -20,14 +20,13 @@ qsub: job 36968229.gadi-pbs ready
 Once the interactive job is running run `qjupyter.sh` to launch the notebook and receive further instructions.
 
 ```
-[bw0729@gadi-cpu-clx-2731 ~]$ sh qJuypter/qjupyter.sh
+[bw0729@gadi-cpu-clx-2847 ~]$ sh qJuypter/qjupyter.sh
 
-
-Launching Jupyter Notebook with port 8080 on gadi-cpu-clx-2731.gadi.nci.org.au
+Launching Jupyter Notebook with port 8080 on gadi-cpu-clx-2847.gadi.nci.org.au
 
 Your SSH tunnel command on your desktop should look like the following
 
-  ssh -L 9999:gadi-cpu-clx-2731.gadi.nci.org.au:8080 bw0729@gadi-login-08.gadi.nci.org.au
+  ssh -L 9999:gadi-cpu-clx-2847.gadi.nci.org.au:8080 bw0729@gadi.nci.org.au
 
 Then visit http://localhost:9999 on your desktop.
 
